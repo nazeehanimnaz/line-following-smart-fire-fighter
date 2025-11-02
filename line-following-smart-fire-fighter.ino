@@ -49,9 +49,28 @@ void loop() {
   int rightIRSensorValue = digitalRead(IRsensorR);
   int leftIRSensorValue = digitalRead(IRsensorL);
 
-  int flamesensorValue = AnalogRead(flameSensor);
+  int flamesensorValue = analogRead(flameSensor);
 
   Serial.println(flamesensorValue);
+
+  if (flamesensorValue < 950) {
+    rotateMotor(0, 0);
+    digitalWrite(LED,HIGH);
+    BuzzerTune();
+    digitalWrite(relay,HIGH);
+    delay(3000);
+    digitalWrite(relay,LOW);
+  }
+
+  else if (flamesensorValue > 950) {
+      Serial.println("No flame detected");
+  }
+
+  else {
+      Serial.println("Error");
+  }
+
+  
 
 
   /*

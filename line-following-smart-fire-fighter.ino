@@ -15,7 +15,7 @@
 #define LED 13
 #define buzzer 1
 
-#define flameSensor 7
+#define flameSensor A0
 #define MOTOR_SPEED 180
 
 
@@ -49,7 +49,7 @@ void loop() {
   int rightIRSensorValue = digitalRead(IRsensorR);
   int leftIRSensorValue = digitalRead(IRsensorL);
 
-  int flamesensorValue = digitalRead(flameSensor);
+  int flamesensorValue = AnalogRead(flameSensor);
 
   Serial.println(flamesensorValue);
 

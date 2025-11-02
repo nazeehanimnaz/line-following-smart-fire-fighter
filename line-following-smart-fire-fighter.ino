@@ -15,8 +15,7 @@
 #define LED 13
 #define buzzer 1
 
-#define flameSensorR 7
-#define flameSensorL 8
+#define flameSensor 7
 #define MOTOR_SPEED 180
 
 
@@ -38,8 +37,7 @@ void setup() {
   pinMode(LED,OUTPUT);
   pinMode(IRsensorL,INPUT);
   pinMode(IRsensorR, INPUT);
-  pinMode(flameSensorL,INPUT);
-  pinMode(flameSensorR,INPUT);
+  pinMode(flameSensor,INPUT);
   pinMode(relay,OUTPUT);
   
   rotateMotor(0,0);
@@ -51,8 +49,12 @@ void loop() {
   int rightIRSensorValue = digitalRead(IRsensorR);
   int leftIRSensorValue = digitalRead(IRsensorL);
 
-  int flamesensorValue = digitalRead(flameSensorR);
+  int flamesensorValue = digitalRead(flameSensor);
 
+  Serial.println(flamesensorValue);
+
+
+  /*
   if (flamesensorValue == 1) {
     rotateMotor(0, 0);
     digitalWrite(LED,HIGH);
@@ -79,7 +81,7 @@ void loop() {
     else {
     rotateMotor(0, 0);
     }
-  }
+  }*/
 }
 
 

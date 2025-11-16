@@ -46,8 +46,8 @@ void loop() {
 
   Serial.println(flamesensorValue);
 
-/*
-  if (flamesensorValue < 300) {
+
+  if (flamesensorValue < 200) {
     Stop();
     Siren();
     digitalWrite(relay,HIGH);
@@ -57,7 +57,7 @@ void loop() {
     delay(10000);
   }
 
-  else if (flamesensorValue > 300) {
+  else if (flamesensorValue > 200) {
     //If none of the sensors detects black line, then go straight
     if (rightIRSensorValue == LOW && leftIRSensorValue == LOW) {
       Forward();
@@ -74,7 +74,7 @@ void loop() {
     else {
       Stop();
     }
-  }*/
+  }
 }
 
 //Funtion for buzzer tone

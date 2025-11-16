@@ -46,12 +46,12 @@ void loop() {
 
   Serial.println(flamesensorValue);
 
-Forward();
-delay(2000);
-Backward();
-delay(2000);
+//Forward();
+//delay(2000);
+//Backward();
+//delay(2000);
 
-/*
+
   if (flamesensorValue == 0) {
     Stop();
     Siren();
@@ -79,7 +79,7 @@ delay(2000);
     else {
       Stop();
     }
-  }*/
+  }
 }
 
 //Function for buzzer tone

@@ -42,7 +42,7 @@ void loop() {
   
   int rightIRSensorValue = digitalRead(IRsensorR);
   int leftIRSensorValue = digitalRead(IRsensorL);
-  int flamesensorValue = analogRead(flameSensor);
+  int flamesensorValue = digitalRead(flameSensor);
 
   Serial.println(flamesensorValue);
 

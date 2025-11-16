@@ -11,7 +11,7 @@
 #define IRsensorR 7
 #define relay 4
 #define buzzer 12
-#define flameSensor 13
+#define flameSensor 6
 
 #define s 130 //base speed
 #define t 180//turning speed
@@ -46,7 +46,9 @@ void loop() {
 
   Serial.println(flamesensorValue);
 
+Forward();
 
+/*
   if (flamesensorValue == 0) {
     Stop();
     Siren();
@@ -74,7 +76,7 @@ void loop() {
     else {
       Stop();
     }
-  }
+  }*/
 }
 
 //Function for buzzer tone

@@ -10,8 +10,8 @@
 #define IRsensorL 8
 #define IRsensorR 7
 #define relay 4
-#define buzzer 13
-#define flameSensor A0
+#define buzzer 12
+#define flameSensor 13
 
 #define s 130 //base speed
 #define t 180//turning speed
@@ -47,7 +47,7 @@ void loop() {
   Serial.println(flamesensorValue);
 
 
-  if (flamesensorValue < 200) {
+  if (flamesensorValue == 0) {
     Stop();
     Siren();
     digitalWrite(relay,HIGH);
@@ -57,7 +57,7 @@ void loop() {
     delay(10000);
   }
 
-  else if (flamesensorValue > 200) {
+  else if (flamesensorValue == 1) {
     //If none of the sensors detects black line, then go straight
     if (rightIRSensorValue == LOW && leftIRSensorValue == LOW) {
       Forward();
@@ -77,7 +77,7 @@ void loop() {
   }
 }
 
-//Funtion for buzzer tone
+//Function for buzzer tone
 void Siren() {
   digitalWrite(buzzer,HIGH);
   delay(500);

@@ -47,6 +47,9 @@ void loop() {
   Serial.println(flamesensorValue);
 
 Forward();
+delay(2000);
+Backward();
+delay(2000);
 
 /*
   if (flamesensorValue == 0) {

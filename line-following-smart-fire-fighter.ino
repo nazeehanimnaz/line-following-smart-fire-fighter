@@ -46,7 +46,7 @@ void loop() {
 
   Serial.println(flamesensorValue);
 
-
+/*
   if (flamesensorValue < 300) {
     Stop();
     Siren();
@@ -74,7 +74,7 @@ void loop() {
     else {
       Stop();
     }
-  }
+  }*/
 }
 
 //Funtion for buzzer tone

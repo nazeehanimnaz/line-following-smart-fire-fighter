@@ -42,17 +42,11 @@ void loop() {
   
   int rightIRSensorValue = digitalRead(IRsensorR);
   int leftIRSensorValue = digitalRead(IRsensorL);
-  int flamesensorValue = digitalRead(flameSensor);
+  int flamesensorValue = analogRead(flameSensor);
 
   Serial.println(flamesensorValue);
 
-//Forward();
-//delay(2000);
-//Backward();
-//delay(2000);
-
-
-  if (flamesensorValue == 0) {
+  if (flamesensorValue < 300) {
     Stop();
     Siren();
     digitalWrite(relay,HIGH);
@@ -62,7 +56,7 @@ void loop() {
     delay(10000);
   }
 
-  else if (flamesensorValue == 1) {
+  else if (flamesensorValue >= 300) {
     //If none of the sensors detects black line, then go straight
     if (rightIRSensorValue == LOW && leftIRSensorValue == LOW) {
       Forward();

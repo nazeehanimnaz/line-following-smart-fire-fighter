@@ -5,6 +5,7 @@
      - It detects fire/flame.
      - When fire is detected, it stops and sprays water.
 
+
 * COMPONENTS USED
 
 1. Arduino UNO x1.
@@ -32,11 +33,13 @@
 
 IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the gear motors and cause the robot to NOT move.
 
+
 * TIPS
 
 1. Use high quality batteries for efficiency.
 2. Remove the wire connected to the VIN pin of Arduino before connecting the Arduino to the PC/laptop to upload the code. Once the code is uploaded, disconnect the Arduino from the PC/laptop and connect the wire back to the VIN pin of the Arduino. This is to prevent too much voltage flowing into the Arduino via the laptop and the batteries.
 3. Always check the value given by the flame sensor via the Serial Monitor and change the threshold value accordingly. Threshold value may change according to your environment due to differences in the amount of light in the room.
+
 
 * PROBLEMS FACED AND SOLUTIONS
 

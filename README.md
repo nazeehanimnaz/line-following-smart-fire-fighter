@@ -1,17 +1,36 @@
+* WHAT IT DOES
+
+   This is a line following smart fire fighter.
+     - It acts as a line following robot (to follow a specific path).
+     - It detects fire/flame.
+     - When fire is detected, it stops and sprays water.
+
 * COMPONENTS USED
 
-1. Arduino UNO x1
-2. L298N Motor Driver Module x1
-3. Small Breadboard x1
-4. 6V Gear Motor x4
-5. IR Sensor x2
-6. Flame Sensor x1
-7. Buzzer x1
-8. 3.7V 3500mA 18650 Li-ion Rechargeable Battery x2
-9. Switch x1
-10. 5V Relay Module x1
-11. 9V Battery x1
-12. DC Motor Pump x1
+1. Arduino UNO x1.
+2. L298N Motor Driver Module x1.
+3. Small Breadboard x1.
+4. 6V Gear Motor x4.
+5. IR Sensor x2.
+6. Flame Sensor x1.
+7. 3.7V 3500mA 18650 Li-ion Rechargeable Battery x2.
+8. Switch x1.
+9. 5V Relay Module x1.
+10. 9V Battery x1.
+11. 3-6V DC Motor Submersible Pump x1.
+12. Jumper wires (as needed).
+
+* EXTRA COMPONENTS NEEDED
+
+13. 4 Wheel Car Chassis Kit (this will include 4 Gear Motors) x1.
+14. Battery chargers.
+15. Battery holders, brackets, protective case, etc. (if needed).
+16. Water container to fill water needed for spraying (should be very light).
+17. Long tube to spray water.
+18. Black tape (to make the path for following).
+19. Cardboards, color papers, etc. (for props and decorations)
+
+IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the gear motors and cause the robot to NOT move.
 
 * TIPS
 

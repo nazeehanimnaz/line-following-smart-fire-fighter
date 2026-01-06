@@ -53,7 +53,7 @@ void loop() {
     delay(5000);
     digitalWrite(relay,LOW);
     Stop();
-    delay(10000);
+    delay(1000);
   }
 
   else if (flamesensorValue >= 300) {

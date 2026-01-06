@@ -1,4 +1,6 @@
-* __WHAT IT DOES__
+ <div align="justify"> 
+
+## __WHAT IT DOES__
 
    This is a line following smart fire fighter.
      - It acts as a line following robot (to follow a specific path).
@@ -7,7 +9,7 @@
 
 <br>
 
-* __COMPONENTS USED__
+## __COMPONENTS USED__
 
 1. Arduino UNO x1.
 2. L298N Motor Driver Module x1.
@@ -23,7 +25,7 @@
 12. Jumper wires (as needed).
 13. Buzzer x1.
 
-* __EXTRA COMPONENTS NEEDED__
+## __EXTRA COMPONENTS NEEDED__
 
 14. 4 Wheel Car Chassis Kit (this will include 4 Gear Motors) x1.
 15. Battery chargers.
@@ -37,7 +39,7 @@ _IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the ge
 
 <br>
 
-* __THE THEORY BEHIND__
+## __THE THEORY BEHIND__
 
 1. _How is everything powered up?_ <br>
    - The rechargeable battery powers up the L298N motor driver module. As the total voltage of the batteries do not exceed 12v, the L298N's jumper is not removed. This makes the 5V pin of the L298N to act as an output. This output is used to give power to the Arduino and the relay module. Then through the 5V pin of the Arduino, the rest of the sensors i.e. 2 IR sensors and the flame sensor are powered up. <br>
@@ -51,7 +53,7 @@ _IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the ge
 
 <br>
 
-* __TIPS__
+## __TIPS__
 
 1. Use high quality batteries for efficiency.
 2. Remove the wire connected to the VIN pin of Arduino before connecting the Arduino to the PC/laptop to upload the code. Once the code is uploaded, disconnect the Arduino from the PC/laptop and connect the wire back to the VIN pin of the Arduino. This is to prevent too much voltage flowing into the Arduino via the laptop and the batteries.
@@ -59,7 +61,7 @@ _IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the ge
 
 <br>
 
-* __PROBLEMS FACED AND SOLUTIONS__
+## __PROBLEMS FACED AND SOLUTIONS__
 
 1. _Why does my relay keep switching on when no fire is detected?_ <br>
    There are 2 main reasons for this; <br>
@@ -80,6 +82,13 @@ _IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the ge
 
 5. _Why does the water pump not pump water?_ <br>
    - If the connections are all good and it still does not work, the issue could be with the 9V battery. There might not be enough voltage to poer up the motor pump. Check the voltage of the battery with a multimeter. If it iss lower than 4v, replace the battery with a new one and try again. <br>
+
+
+
+
+
+
+</div>
    
 
    

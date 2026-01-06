@@ -1,11 +1,10 @@
  <div align="justify"> 
 
 ## __WHAT IT DOES__
-
-   This is a line following smart fire fighter.
-     - It acts as a line following robot (to follow a specific path).
-     - It detects fire/flame.
-     - When fire is detected, it stops and sprays water.
+This is a line following smart fire fighter. <br>
+ - It acts as a line following robot (to follow a specific path).
+ - It detects fire/flame.
+ - When fire is detected, it stops and sprays water.
 
 <br>
 

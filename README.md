@@ -49,8 +49,8 @@ IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the gea
 
 1. P: Why does my relay keep switching on when no fire is detected? <br>
    S: There are 2 main reasons for this; <br>
-       - The wires of the flame sensor are loose, making the flame sensor switch on and off. This would give lower and higher values simultaneously, causing the relay to switch on. Secure the wires with strong tape or by soldering.<br>
-       - The sensitivity of the flame sensor is too high and would even detect lights/sunlight in the room. Therefore, either reduce the sensitivity by rotating the potentiometer/screw on the sensor, or give a very small value as the threshold value in the code for detecting fire. <br>
+      - The wires of the flame sensor are loose, making the flame sensor switch on and off. This would give lower and higher values simultaneously, causing the relay to switch on. Secure the wires with strong tape or by soldering.<br>
+      - The sensitivity of the flame sensor is too high and would even detect lights/sunlight in the room. Therefore, either reduce the sensitivity by rotating the potentiometer/screw on the sensor, or give a very small value as the threshold value in the code for detecting fire. <br>
 
 2. P: Why do wheels rotate when off the floor, but not when on the floor? <br>
    S: If wheels are rotating when off the floor, this means that there us no problem with the supplied voltage or current. There could be 2 reasons for this:

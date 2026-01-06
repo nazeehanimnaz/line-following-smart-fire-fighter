@@ -1,6 +1,6 @@
 
 
-// Define all the pins of the motor driver module
+// Define all the pins of the motor driver module, sensors, relay and buzzer
 #define enaPin 3
 #define in1 5
 #define in2 2
@@ -19,6 +19,7 @@
 
 void setup() {
 
+  // Start thr Serial Monitor
   Serial.begin(9600);
 
   // Configure the pins as INPUT or OUTPUT
@@ -33,19 +34,23 @@ void setup() {
   pinMode(IRsensorR, INPUT);
   pinMode(flameSensor,INPUT);
   pinMode(relay,OUTPUT);
-  
+
+  // Siren rings at start
   Siren();
 
 }
 
 void loop() {
-  
+
+  // Storing sensor values into relevant variables
   int rightIRSensorValue = digitalRead(IRsensorR);
   int leftIRSensorValue = digitalRead(IRsensorL);
   int flamesensorValue = analogRead(flameSensor);
 
-  Serial.println(flamesensorValue);
+  // Print the flame sensor values on the Serial Monitor to find the threshold value
+  Serial.println(flamesensorValue); 
 
+  // If flame is detected
   if (flamesensorValue < 300) {
     Stop();
     Siren();
@@ -56,20 +61,21 @@ void loop() {
     delay(1000);
   }
 
+  // If flame is not detected
   else if (flamesensorValue >= 300) {
-    //If none of the sensors detects black line, then go straight
+    //If none of the IR sensors detects black line, then go straight
     if (rightIRSensorValue == LOW && leftIRSensorValue == LOW) {
       Forward();
     }
-  //If right sensor detects black line, then turn right
+  //If right IR sensor detects black line, then turn right
     else if (rightIRSensorValue == HIGH && leftIRSensorValue == LOW) {
       Right(); 
     }
-  //If left sensor detects black line, then turn left  
+  //If left IR sensor detects black line, then turn left  
     else if (rightIRSensorValue == LOW && leftIRSensorValue == HIGH ){
       Left();
     } 
-  //If both the sensors detect black line, then stop 
+  //If both the IR sensors detect black line, then stop 
     else {
       Stop();
     }

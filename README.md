@@ -57,6 +57,7 @@ _IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the ge
 1. Use high quality batteries for efficiency.
 2. Remove the wire connected to the VIN pin of Arduino before connecting the Arduino to the PC/laptop to upload the code. Once the code is uploaded, disconnect the Arduino from the PC/laptop and connect the wire back to the VIN pin of the Arduino. This is to prevent too much voltage flowing into the Arduino via the laptop and the batteries.
 3. Always check the value given by the flame sensor via the Serial Monitor and change the threshold value accordingly. Threshold value may change according to your environment due to differences in the amount of light in the room.
+4. The most common issue while making robotics projects is that the wires break too soon. Either better wires instead of jumper wires should be used, or use a multimeter to constantly check if the jumper wires are in good condition.
 
 <br>
 
@@ -77,10 +78,15 @@ _IMPORTANT NOTE: Do NOT make the robot heavy as this can put more load on the ge
    - This could be due to several reasons from wrong connections, broken wires to short circuited boards. But if all is well and if the issue still persists, something else could be wrong. Check if the flame sensor and the 2 IR sensors given power through the Arduino, have thier power LEDs switched on. If so, the issue is due to the rechargeable batteries not being able to give enough power to the wheels. Recharge the batteries atleast till they reach a total voltage of 7.4V and try again. <br>
 
 4. _Why are the IR sensors not detecting the black path, causing the robot to not follow the line?_ <br>
+  There could be 2 main reasons for this; <br>
    - If you are using black paper for the path, the IR sensors sometimes do not detect it as black when the environment is too bright. As a solution, it is always best to use black tape or black paint to make the path, as these would give the darkest shade of black to the path, making the IR sensors detect the black even at brighter environments. <br>
+   - The wheels might be rotating too fast. So by the time the IR sensor detects that the robot is out of the path, the reaction time is too late. This causes the robot to move out of the path amd completely stop. To use slower or varying speed, the ENA and ENB pins of the L298N should be connected to the PWM pins of the Arduino.
 
-5. _Why does the water pump not pump water?_ <br>
+5. _Why does the motor pump not pump water?_ <br>
    - If the connections are all good and it still does not work, the issue could be with the 9V battery. There might not be enough voltage to poer up the motor pump. Check the voltage of the battery with a multimeter. If it iss lower than 4v, replace the battery with a new one and try again. <br>
+
+6. _Why are the wheels only moving at full speed instead of varying or reduced speeds?_ <br>
+   - The ENA and ENB pins of the L298N should be connected to PWM pins of the Arduino. Only this allows speed to vary as given in the code. <br>
 
 
 
